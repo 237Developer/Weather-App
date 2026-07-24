@@ -1,0 +1,37 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/237Developer/Weather-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/237Developer/Weather-App/issues"
+  },
+  "homepage": "https://github.com/237Developer/Weather-App#readme",
+  "devDependencies": {
+    "eslint": "^10.6.0",
+    "eslint-config-xo": "^0.57.0",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.9.5",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "date-fns": "^4.4.0",
+    "iconify-icon": "^3.0.2",
+    "vite": "^8.1.4"
+  }
+}

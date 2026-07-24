@@ -1,0 +1,77 @@
+.home {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  margin-top: 4rem;
+  align-items: center;
+}
+
+.home button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 17rem;
+  min-width: 100px;
+  height: 2.5rem;
+  min-height: 40px;
+  background-color: rgb(59, 59, 222);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.location-icon {
+  font-size: 22px;
+}
+
+.search-home {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px;
+  height: 40px;
+  width: 25rem;
+  background-color: #fff;
+  border-radius: 10px;
+  color: rgb(75, 74, 74);
+}
+
+.search-icon {
+  font-size: 20px;
+}
+
+.search-home input {
+  border: none;
+  flex: 1;
+  height: 100%;
+  color: rgb(75, 74, 74);
+  font-size: 1.05rem;
+}
+
+.search-home input:focus {
+  border: none;
+  outline: none;
+}
+
+.home p:first-child {
+    text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.home p:last-child {
+  font-size: 0.8rem;
+  text-align: center;
+  color: rgb(28, 26, 26);
+}
+
+.padlock-icon {
+  color: black
+  font-size: 1.2em;
+  margin-right: 8px;
+}

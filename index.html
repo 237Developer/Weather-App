@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles/components.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
+    <link rel="stylesheet" href="src/styles/loader.css" />
+    <link rel="stylesheet" href="src/styles/home.css" />
+    <link rel="stylesheet" href="src/styles/utilities.css" />
+    <link rel="stylesheet" href="src/styles/base.css" />
+    <link rel="stylesheet" href="src/styles/header.css" />
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="logo">
+          <iconify-icon class="hidden" icon="mdi:menu"></iconify-icon
+          ><img
+            alt="logo"
+            src="./disgn/logo.png"
+            class="logo-img logo-header"
+          />
+          <h1>Weather</h1>
+        </div>
+        <nav>
+          <a href="">Home</a><a href="">Forecast</a><a href="">About</a>
+        </nav>
+      </header>
+      <div class="home">
+        <p>Please search for a city to see the weather</p>
+        <div class="search-home">
+          <iconify-icon icon="mdi:search" class="search-icon"></iconify-icon
+          ><input type="text" class="search-home" />
+        </div>
+        <button type="button">
+          <iconify-icon icon="mdi:location" class="location-icon"></iconify-icon
+          >Use my position
+        </button>
+        <p>
+          <iconify-icon icon="mdi:lock" class="padlock-icon"></iconify-icon>Your
+          location remains private. <br />No data is stored widthout your
+          permission
+        </p>
+      </div>
+      <div class="loader hidden">
+        <p>Research in progress ...</p>
+        <p>We are retrieving weather data for <span>Younde</span></p>
+        <div class="first">
+          <img
+            src="./disgn/logo.png"
+            class="logo-img logo-header"
+            alt="loader-icon"
+          />
+        </div>
+        <div class="second">This may take a few seconds...</div>
+      </div>
+      <main class="hidden">
+        <div>
+          <div class="search-bar">
+            <div>
+              <iconify-icon icon="mdi:location"></iconify-icon>
+              <input type="text" class="search-main" />
+            </div>
+            <iconify-icon
+              icon="mdi:search"
+              class="search-icon-main"
+            ></iconify-icon>
+          </div>
+          <button class="get-weather">Get the weather</button>
+        </div>
+        <div class="components">
+          <div class="today">
+            <p class="today-date">Aujourd'hui. 11 juillet 2025</p>
+            <div class="data">
+              <div class="temperature">
+                <div>
+                  <img
+                    src="src/icons/clear-day.svg"
+                    alt="icon"
+                    class="current-weather-icon"
+                  />
+                  <span class="temp-number">28°C</span>
+                </div>
+                <p class="weather-description">Partly cloudy</p>
+              </div>
+              <div class="separetor"></div>
+              <div class="more-details">
+                <div>
+                  <iconify-icon icon="clarity:thermometer-line"></iconify-icon>
+                  <p>Feelings<span class="feeling-metric">30°C</span></p>
+                </div>
+                <div>
+                  <iconify-icon icon="carbon:humidity"></iconify-icon>
+                  <p>Humidity<span class="humidity-metric">72°C</span></p>
+                </div>
+                <div>
+                  <iconify-icon icon="f7:wind"></iconify-icon>
+                  <p>Wind<span class="wind-speed-metric">14km/h</span></p>
+                </div>
+                <div>
+                  <iconify-icon icon="lets-icons:pressure"></iconify-icon>
+                  <p>Pressure<span class="pressure-metric">1012hPa</span></p>
+                </div>
+                <div>
+                  <iconify-icon
+                    icon="material-symbols-light:visibility-outline"
+                  ></iconify-icon>
+                  <p>Visibility<span class="visibility-metric">10km</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="switch-units">
+              <button class="celcuis">°C</button
+              ><button class="fahrenheit">°F</button>
+            </div>
+          </div>
+          <div class="forecast">
+            <p>5-day forecast</p>
+            <div class="day-1">
+              <span class="date-of-day">Sam. 12 juillet</span>
+              <img src="./src/icons/clear-day.svg" alt="icon" />
+              <span class="maxmin-tem">32°C / 22°C</span>
+            </div>
+            <div class="day-2">
+              <span class="date-of-day">Dim 13 juillet</span>
+              <img src="./src/icons/clear-day.svg" alt="icon" />
+              <span class="maxmin-tem">30°C / 21°C</span>
+            </div>
+            <div class="day-3">
+              <span class="date-of-day">Lun 14 juillet</span>
+              <img src="./src/icons/clear-day.svg" alt="icon" />
+              <span class="maxmin-tem">31°C / 22°C</span>
+            </div>
+            <div class="day-4">
+              <span class="date-of-day">Ma. 15 juillet</span>
+              <img src="./src/icons/clear-day.svg" alt="icon" />
+              <span class="maxmin-tem">31°C / 22°</span>
+            </div>
+            <div class="day-5">
+              <span class="date-of-day">Mer. 16 juillet</span>
+              <img src="./src/icons/clear-day.svg" alt="icon" />
+              <span class="maxmin-tem">33°C / 23°C</span>
+            </div>
+          </div>
+        </div>
+        <div class="weather-details">
+          <div>
+            <p>
+              <iconify-icon
+                icon="boxicons:thunder-filled"
+                class="severe-risk-icon"
+              ></iconify-icon>
+              Severe Risk
+            </p>
+            <p
+              class="details-metric severe-risk-percentage"
+              class="severe-risk-metric"
+            >
+              Good
+            </p>
+          </div>
+          <div>
+            <p>
+              <iconify-icon
+                icon="glyphs:sunrise-1-bold"
+                class="sunrise-icon"
+              ></iconify-icon>
+              Sunrise
+            </p>
+            <p class="details-metric sunrise-metric">06h:15</p>
+          </div>
+          <div>
+            <p>
+              <iconify-icon icon="bi:sunset" class="sunset-icon"></iconify-icon>
+              Sunset
+            </p>
+            <p class="details-metric sunset-metric">18:45</p>
+          </div>
+          <div>
+            <p>
+              <iconify-icon
+                icon="mingcute:umbrella-fill"
+                class="chance-of-rain-icon"
+              ></iconify-icon>
+              Chance of rain
+            </p>
+            <p class="details-metric rain-metric">20%</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="src/main.js" type="module"></script>
+  </body>
+</html>
