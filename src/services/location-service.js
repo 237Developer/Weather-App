@@ -22,7 +22,7 @@ export function getUserPosition() {
           new Error(messages[error.code] ?? "Could not get your position"),
         );
       },
-      { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
+      { enableHighAccuracy: false, timeout: 20000, maximumAge: 300000 },
     );
   });
 }

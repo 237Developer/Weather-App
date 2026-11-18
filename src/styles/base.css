@@ -16,7 +16,7 @@ html {
 #app {
   display: flex;
   flex-direction: column;
-  background-image: url("../../disgn/bg-image.png");
+  background-image: url("../../disgn/bg-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -27,4 +27,3 @@ html {
 button:hover {
   cursor: pointer;
 }
-
