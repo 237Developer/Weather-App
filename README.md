@@ -4,7 +4,7 @@ A simple weather app built with vanilla JavaScript. Search for a city or use you
 
 This project was built to earn the **JavaScript Certification (300 hours)** from [freeCodeCamp](https://www.freecodecamp.org/).
 
-**Live demo:** <add your Vercel link here>
+**Live demo:** [Weather-app](https://weather-app-two-chi-69.vercel.app/)
 
 ## Features
 
