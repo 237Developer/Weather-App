@@ -1,5 +1,5 @@
 header {
-  width: 100vw;
+  width: 100%; /* 100vw caused horizontal overflow because of the scrollbar */
   height: 65px;
   display: flex;
   justify-content: space-between;
@@ -15,6 +15,7 @@ header {
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0; /* the logo never gets squeezed by the nav */
 }
 
 h1 {
@@ -28,12 +29,39 @@ header nav {
   gap: 20px;
   padding-right: 25px;
 }
+
 header a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  white-space: nowrap; /* links never break on two lines */
 }
 
 header .logo-header {
   width: 50px;
+}
+
+/* ========== MOBILE / TABLET (≤ 768px) ========== */
+@media (max-width: 768px) {
+  header {
+    height: 56px;
+    padding: 6px 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  header .logo-header {
+    width: 36px;
+  }
+
+  header nav {
+    gap: 12px;
+    padding-right: 0;
+  }
+
+  header a {
+    font-size: 0.85rem;
+  }
 }

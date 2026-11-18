@@ -1,5 +1,7 @@
 import { startFetching } from "../services/weather-service.js";
+import { getUserPosition } from "../services/location-service.js";
 
+const useMyPositionBtn = document.querySelector(".home button");
 const loader = document.querySelector(".loader");
 const mainContent = document.querySelector("main");
 const searchBarHome = document.querySelector(".search-home");
@@ -87,5 +89,22 @@ export function getWeather() {
         mainContent.classList.remove("hidden");
       }
     });
+  });
+  useMyPositionBtn.addEventListener("click", async () => {
+    home.classList.add("hidden");
+    loader.classList.remove("hidden");
+
+    try {
+      const coordinates = await getUserPosition();
+      await startFetching(coordinates);
+    } catch (error) {
+      alert(error.message);
+      loader.classList.add("hidden");
+      home.classList.remove("hidden");
+      return;
+    }
+
+    loader.classList.add("hidden");
+    mainContent.classList.remove("hidden");
   });
 }

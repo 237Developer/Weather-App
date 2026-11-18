@@ -284,4 +284,153 @@ main > div:first-child > button {
   color: rgb(11, 103, 233);
 }
 
-/* ------------------------------------------*/
+/* ========== MOBILE / TABLET (≤ 768px) ========== */
+@media (max-width: 768px) {
+  /* base.css is loaded after main.css, so higher specificity is needed
+     to unlock scrolling (body is overflow: hidden + 100vh on desktop) */
+  html body {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body #app {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  main {
+    margin: 15px 12px;
+    height: auto;
+    gap: 12px;
+  }
+
+  /* ----- Top part: search bar + button ----- */
+  main > div:first-child {
+    align-self: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-bar > div:first-child {
+    min-width: 0; /* lets the input shrink instead of overflowing */
+  }
+
+  .search-bar > div:first-child > input {
+    min-width: 0;
+  }
+
+  main > div:first-child > button {
+    width: 100%;
+  }
+
+  /* ----- Today + forecast cards stacked ----- */
+  .components {
+    flex: none;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .components > div {
+    height: auto;
+    max-height: none;
+  }
+
+  /* flex: 2 / flex: 1 would collapse the height in a column layout */
+  .components .today,
+  .components .forecast {
+    flex: none;
+  }
+
+  /* ----- Today card ----- */
+  .components .today {
+    padding: 20px 15px;
+    font-size: 0.8rem;
+  }
+
+  .today .data {
+    flex: none;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .data .separetor {
+    width: 100%;
+    height: 1px;
+  }
+
+  .data .temperature {
+    padding-right: 0;
+  }
+
+  .temperature .current-weather-icon {
+    width: 5rem;
+  }
+
+  .temperature .temp-number {
+    font-size: 40px;
+  }
+
+  .data .more-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding-left: 0;
+  }
+
+  /* the 5th item takes the full row so the grid stays clean */
+  .more-details > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .more-details iconify-icon {
+    font-size: 26px;
+  }
+
+  .switch-units {
+    align-self: center;
+  }
+
+  /* ----- Forecast card ----- */
+  .forecast {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .forecast > * {
+    gap: 10px;
+    padding: 8px 0;
+  }
+
+  /* date on the left, temps on the right, icons aligned in the middle */
+  .forecast .date-of-day {
+    flex: 1;
+    text-align: left;
+  }
+
+  .forecast .maxmin-tem {
+    flex: 1;
+    text-align: right;
+  }
+
+  /* ----- Weather details (severe risk, sunrise, sunset, rain) ----- */
+  .weather-details {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+  }
+
+  .weather-details > div {
+    flex: 1 1 calc(50% - 5px);
+    max-width: none;
+    gap: 10px;
+    padding: 0.8rem;
+  }
+}
